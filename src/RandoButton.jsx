@@ -5,7 +5,7 @@ export default function RandoButton({me}){
   }
 
   return (
-    <button onClick={logMe}>Check user object</button>
+    <button onClick={logMe}>Log user object</button>
   )
 }
 

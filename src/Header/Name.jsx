@@ -1,6 +1,5 @@
 import Submit from "../hooks/Submit"
 
-
 export default function Name({ me, editMe }) {
   
   const contentEditableRef = Submit((value) => {
@@ -9,6 +8,6 @@ export default function Name({ me, editMe }) {
 
 
   return (
-      <h1 contentEditable ref={contentEditableRef} onSubmit={editMe}>{me.name}</h1>
+      <h1 contentEditable ref={contentEditableRef}>{me.name}</h1>
   )
 } 

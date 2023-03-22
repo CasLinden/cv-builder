@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-function Submit(onSubmit) {
+export default function Submit(onSubmit) {
   const ref = useRef();
 
   useEffect(() => {
@@ -28,5 +28,8 @@ function Submit(onSubmit) {
   return ref;
 }
 
-export default Submit;
 
+  // useEffect(() => {
+  //   localStorage.setItem("user", JSON.stringify(user));
+  //   console.log("saved to localStorage");
+  // }, [user]);
