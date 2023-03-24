@@ -1,20 +1,32 @@
-import Name from "./Name"
-import Job from "./Job"
-import Age from "./Age";
 import '../css/header.css'
-import ProfilePicture from "./Profilepicture";
-import RandoButton from "../RandoButton";
 
-export default function Header({ me, editMe }) {
+
+import EditableText from "../EditableText";
+import ProfilePicture from "./Profilepicture";
+
+function Header() {
   return (
-    <div className="header">
-      <div className="name-job-age">
-        <Name me={me} editMe={editMe}></Name>
-        <Job me={me} editMe={editMe}></Job>
-        <Age me={me} editMe={editMe}></Age>
-        <RandoButton user={me}></RandoButton>
+      <div className="header">
+        <div className="name-job-age">
+          <EditableText
+            label="Name"
+            field="name"
+            component={(props) => <h1 {...props} />}
+          />
+          <EditableText
+            label="Job"
+            field="job"
+            component={(props) => <h2 {...props} />}
+          />
+          <EditableText
+            label="Age"
+            field="age"
+            component={(props) => <span {...props} />}
+          />
+        </div>
+          <ProfilePicture></ProfilePicture>
       </div>
-      <ProfilePicture></ProfilePicture>
-    </div>
   );
 }
+
+export default Header;

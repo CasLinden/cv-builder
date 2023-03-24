@@ -37,10 +37,10 @@ function App() {
 
   return (
     <div className="app">
-      <Header me={user} editMe={handleUserChange}></Header>
+      <Header></Header>
       <Contact me={user} editMe={handleUserChange}></Contact>
       <Profile me={user} editMe={handleUserChange}></Profile>
-      <WorkExperience me={user} editMe={handleUserChange}></WorkExperience>
+      {/* <WorkExperience me={user} editMe={handleUserChange}></WorkExperience> */}
     </div>
   );
 }
