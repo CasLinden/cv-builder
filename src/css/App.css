@@ -1,12 +1,26 @@
 .app{
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-areas: 
   "header header"
-  "left-column right-column"
+  "contact profile"
+  "skills work-experience"
   ;
 }
 
 .header{
   grid-area: header;
 }
+
+.contact{
+  grid-area: contact;
+}
+
+.profile{
+  grid-area: profile;
+}
+
+.work-experience{
+  grid-area: work-experience;
+}
+

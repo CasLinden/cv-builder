@@ -1,3 +1,21 @@
 .contact{
-  grid-area: left-column;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.icon-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item img{
+  height: 1.5rem;
 }

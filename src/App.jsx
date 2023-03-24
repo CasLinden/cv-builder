@@ -3,6 +3,8 @@ import Header from "./Header/Header";
 import RandoButton from "./RandoButton";
 import Contact from "./Contact/Contact";
 import defaultValues from "./defaultvalues";
+import Profile from "./Profile/Profile";
+import WorkExperience from "./Workexperience/Workexperience";
 
 import "./css/App.css";
 
@@ -11,7 +13,8 @@ function App() {
   const [user, setUser] = useState(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     return (
-      storedUser || defaultValues
+      storedUser ||
+      defaultValues
     );
   });
 
@@ -34,9 +37,10 @@ function App() {
 
   return (
     <div className="app">
-      {/* <RandoButton me={user}></RandoButton> */}
       <Header me={user} editMe={handleUserChange}></Header>
       <Contact me={user} editMe={handleUserChange}></Contact>
+      <Profile me={user} editMe={handleUserChange}></Profile>
+      <WorkExperience me={user} editMe={handleUserChange}></WorkExperience>
     </div>
   );
 }

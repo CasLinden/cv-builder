@@ -29,7 +29,3 @@ export default function Submit(onSubmit) {
 }
 
 
-  // useEffect(() => {
-  //   localStorage.setItem("user", JSON.stringify(user));
-  //   console.log("saved to localStorage");
-  // }, [user]);

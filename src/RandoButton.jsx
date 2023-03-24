@@ -1,7 +1,7 @@
-export default function RandoButton({me}){
+export default function RandoButton({user}){
 
   function logMe() {
-    console.log(me)
+    console.log(user)
   }
 
   return (

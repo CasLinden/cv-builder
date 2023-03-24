@@ -7,7 +7,7 @@ export default function Age({ me, editMe }) {
 
   return (
     <div className="age" contentEditable ref={contentEditableRef} onSubmit={editMe}>
-      {me.age}
+      Age: {me.age}
     </div>
   );
 }
