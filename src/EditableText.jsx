@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CvDataContext } from "./CvDataContext";
 import useSubmit from "./hooks/useSubmit";
 
-function EditableText({ label, field, component }) {
+function EditableText({field, component }) {
   const { cvData, setCvData } = useContext(CvDataContext);
 
   const handleFieldSubmit = (value) => {
@@ -24,7 +24,6 @@ function EditableText({ label, field, component }) {
 
   return (
     <div>
-      <label></label>
       {contentEditableElement}
     </div>
   );

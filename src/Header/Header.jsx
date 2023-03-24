@@ -9,17 +9,14 @@ function Header() {
       <div className="header">
         <div className="name-job-age">
           <EditableText
-            label="Name"
             field="name"
             component={(props) => <h1 {...props} />}
           />
           <EditableText
-            label="Job"
             field="job"
             component={(props) => <h2 {...props} />}
           />
           <EditableText
-            label="Age"
             field="age"
             component={(props) => <span {...props} />}
           />
