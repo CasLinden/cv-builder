@@ -1,16 +1,10 @@
-import Submit from "../hooks/Submit";
+import EditableText from "../EditableText";
 
-export default function Profile({ me, editMe }) {
-  const contentEditableRef = Submit((value) => {
-    editMe("profile", value);
-  });
-
+export default function Profile() {
   return (
     <div className="profile">
       <h3>PROFILE</h3>
-      <p contentEditable ref={contentEditableRef}>
-        {me.profile}
-      </p>
+      <EditableText field="profile" component={(props) => <span {...props} />} />
     </div>
   );
 }

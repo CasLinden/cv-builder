@@ -13,3 +13,11 @@
   letter-spacing: .8rem;
   margin-bottom: .8rem;
 }
+
+h3{
+  letter-spacing: .4rem;
+}
+
+.picture-conatiner{
+  align-self: center;
+}

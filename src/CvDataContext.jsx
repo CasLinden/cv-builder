@@ -20,6 +20,23 @@ function CvDataProvider({ children }) {
             "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
           workExperience: [
             {
+              key: "defaultjob1",
+              jobTitle: "TV presentor",
+              companyName: "Some British broadcaster",
+              period: "20XX - 20XX",
+              jobDescription:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
+            },
+            {
+              key: "defaultjob2",
+              jobTitle: "TV presentor",
+              companyName: "Some British broadcaster",
+              period: "20XX - 20XX",
+              jobDescription:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
+            },
+            {
+              key: "defaultjob3",
               jobTitle: "TV presentor",
               companyName: "Some British broadcaster",
               period: "20XX - 20XX",

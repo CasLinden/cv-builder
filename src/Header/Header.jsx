@@ -1,6 +1,4 @@
 import '../css/header.css'
-
-
 import EditableText from "../EditableText";
 import ProfilePicture from "./Profilepicture";
 
