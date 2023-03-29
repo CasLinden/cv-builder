@@ -2,16 +2,33 @@
 import { useContext } from "react";
 import { CvDataContext } from "../CvDataContext";
 import EditableText from "../EditableText";
+import '../css/workexperience.css'
 
 
 export default function WorkExperience() {
-  const { cvData } = useContext(CvDataContext);
+  const { cvData, setCvData } = useContext(CvDataContext);
 
-  console.log(cvData.workExperience)
+  
+ 
+  const removeJob = (index) => {
+    const allJobs = cvData.workExperience.slice();
+    allJobs.splice(index, 1);
+    setCvData((prevData) => ({
+      ...prevData,
+      workExperience: allJobs,
+    }));
+  };
+
+  const addJob = () => {
+    // gotta make sure there is some fallback data in case all jobs are removed from localstorage
+  }
 
   return (
     <div className="work-experience">
-      <h3>WORK EXPERIENCE</h3>
+      <div className="title-holder">
+        <h3>WORK EXPERIENCE</h3>
+
+      </div>
       {cvData.workExperience.map((job, index) => (
         <div className="work-experience-section" key={job.key}>
           <EditableText
@@ -38,6 +55,7 @@ export default function WorkExperience() {
             index={index}
             nestedField="jobDescription"
           />
+          <button className="remove-section-button" onClick={() => removeJob(index)}>X</button>
         </div>
       ))}
     </div>

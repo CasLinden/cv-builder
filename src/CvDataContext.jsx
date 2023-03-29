@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
+
 const CvDataContext = createContext();
 
 function CvDataProvider({ children }) {
@@ -20,8 +21,8 @@ function CvDataProvider({ children }) {
             "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
           workExperience: [
             {
-              key: "defaultjob1",
-              jobTitle: "TV presentor",
+              key: "defaultjob",
+              jobTitle: "Job1",
               companyName: "Some British broadcaster",
               period: "20XX - 20XX",
               jobDescription:
@@ -29,7 +30,7 @@ function CvDataProvider({ children }) {
             },
             {
               key: "defaultjob2",
-              jobTitle: "TV presentor",
+              jobTitle: "Job2",
               companyName: "Some British broadcaster",
               period: "20XX - 20XX",
               jobDescription:
@@ -37,7 +38,7 @@ function CvDataProvider({ children }) {
             },
             {
               key: "defaultjob3",
-              jobTitle: "TV presentor",
+              jobTitle: "Job3",
               companyName: "Some British broadcaster",
               period: "20XX - 20XX",
               jobDescription:
