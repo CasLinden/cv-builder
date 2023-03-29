@@ -21,8 +21,8 @@ function CvDataProvider({ children }) {
             "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
           workExperience: [
             {
-              key: "defaultjob",
-              jobTitle: "Job1",
+              key: "defaultjob1",
+              jobTitle: "Job",
               companyName: "Some British broadcaster",
               period: "20XX - 20XX",
               jobDescription:

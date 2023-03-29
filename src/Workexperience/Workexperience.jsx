@@ -18,16 +18,30 @@ export default function WorkExperience() {
       workExperience: allJobs,
     }));
   };
+  
 
   const addJob = () => {
-    // gotta make sure there is some fallback data in case all jobs are removed from localstorage
+    const allJobs = cvData.workExperience.slice();
+    const index = allJobs.length +1
+    allJobs.push({
+      key: `job${index}`,
+      jobTitle: `job${index}`,
+      companyName: "Some British broadcaster",
+      period: "20XX - 20XX",
+      jobDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
+    })
+    setCvData((prevData) => ({
+      ...prevData,
+      workExperience: allJobs,
+    }));
   }
 
   return (
     <div className="work-experience">
       <div className="title-holder">
         <h3>WORK EXPERIENCE</h3>
-
+        <button className="add-section-button" onClick={() => addJob()}>+</button>
       </div>
       {cvData.workExperience.map((job, index) => (
         <div className="work-experience-section" key={job.key}>
