@@ -22,13 +22,28 @@ function CvDataProvider({ children }) {
           skills: [
             {
               key: "defaultskill1",
-              skillDescription: "Solid JavaScript Fundamentals",
+              description: "Solid JavaScript Fundamentals",
               icon: "js"
             },
             {
               key: "defaultskill2",
-              skillDescription: "Solid JavaScript Fundamentals",
-              icon: "js"
+              description: "Building web applications with React",
+              icon: "react"
+            },
+            {
+              key: "defaultskill3",
+              description: "Using Git from the command line",
+              icon: "git"
+            },
+            {
+              key: "defaultskill4",
+              description: "Unit testing with the Jest framework",
+              icon: "jest"
+            },
+            {
+              key: "defaultskill5",
+              description: "Styling pages with Css",
+              icon: "css"
             }
           ],
           workExperience: [
@@ -65,7 +80,7 @@ function CvDataProvider({ children }) {
               period: "20xx -20xx"
             },
             {
-              key: "defaultschool1",
+              key: "defaultschool2",
               institute: "Univesity of XXXX",
               diploma: "Bsc something",
               period: "20xx -20xx"

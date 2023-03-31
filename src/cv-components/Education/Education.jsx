@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
-import "../../css/nestedsections.css"
+import "../../css/nested-sections.css"
 
 export default function Education() {
   const { cvData, setCvData } = useContext(CvDataContext);

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import carl from "../../assets/carl.jpeg";
-import "../../css/picture.css";
+import carl from "/src/assets/carl.jpeg";
+import "/src/css/picture.css";
 
 export default function ProfilePicture({ me }) {
   const [image, setImage] = useState(carl);

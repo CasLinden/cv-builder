@@ -1,5 +1,6 @@
 .work-experience-section,
 .education-section,
+.skill,
 .title.title-holder {
     position: relative; /* set position relative so that the button can be positioned absolutely inside it */
   }
@@ -10,15 +11,19 @@
     position: absolute;
   }
 
+
   .add-section-button,
   .remove-section-button{
     visibility: hidden; /* hide buttons by default */
+    height: 1rem;
   }
   
   .work-experience-section:hover .remove-section-button,
+  .work-experience:hover .add-section-button,
   .education-section:hover .remove-section-button,
   .education:hover .add-section-button,
-  .work-experience:hover .add-section-button
+  .skills:hover .add-section-button,
+  .skill:hover .remove-section-button
    {
     visibility: visible; /* show buttons when the section is hovered */
   }

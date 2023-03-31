@@ -1,4 +1,5 @@
 import EditableText from "../EditableText";
+import "/src/css/profile.css";
 
 export default function Profile() {
   return (

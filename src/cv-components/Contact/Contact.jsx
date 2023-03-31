@@ -1,10 +1,10 @@
 import '../../css/contact.css'
 import ContactItem from "./ContactItem";
-import phone from "../../assets/contacticons/phone.svg"
-import email from "../../assets/contacticons/email.svg"
-import website from "../../assets/contacticons/website.svg";
-import gitHub from "../../assets/contacticons/github.svg";
-import address from "../../assets/contacticons/address.svg";
+import phone from "/src/assets/contacticons/phone.svg"
+import email from "/src/assets/contacticons/email.svg"
+import website from "/src/assets/contacticons/website.svg";
+import gitHub from "/src/assets/contacticons/github.svg";
+import address from "/src/assets/contacticons/address.svg";
 
 export default function Contact() {
   return (

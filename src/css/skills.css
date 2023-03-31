@@ -1,0 +1,15 @@
+.skills{
+    display: grid;
+    gap: 1rem;
+    padding-right: 2rem;
+}
+
+.skill{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icon-container img{
+    height: 1.5rem;
+}
