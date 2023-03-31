@@ -6,8 +6,8 @@ const CvDataContext = createContext();
 function CvDataProvider({ children }) {
   const [cvData, setCvData] = useState(() => {
     const storedData = localStorage.getItem("cvData");
-    return storedData
-      ? JSON.parse(storedData)
+    return storedData // If there is data in local storage, use it
+      ? JSON.parse(storedData) // If there is no data in local storage, use the default data below
       : {
           name: "Global Data Name",
           job: "web developer",
@@ -19,6 +19,18 @@ function CvDataProvider({ children }) {
           address: "Tokyo Suginami-city",
           profile:
             "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
+          skills: [
+            {
+              key: "defaultskill1",
+              skillDescription: "Solid JavaScript Fundamentals",
+              icon: "js"
+            },
+            {
+              key: "defaultskill2",
+              skillDescription: "Solid JavaScript Fundamentals",
+              icon: "js"
+            }
+          ],
           workExperience: [
             {
               key: "defaultjob1",
@@ -45,6 +57,21 @@ function CvDataProvider({ children }) {
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
             },
           ],
+          education: [
+            {
+              key: "defaultschool1",
+              institute: "Univesity of XXXX",
+              diploma: "Bsc something",
+              period: "20xx -20xx"
+            },
+            {
+              key: "defaultschool1",
+              institute: "Univesity of XXXX",
+              diploma: "Bsc something",
+              period: "20xx -20xx"
+            }
+
+          ]
         }; 
   });
 

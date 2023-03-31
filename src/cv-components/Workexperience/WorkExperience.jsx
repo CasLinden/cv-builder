@@ -1,15 +1,11 @@
-
 import { useContext } from "react";
-import { CvDataContext } from "../CvDataContext";
+import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
-import '../css/workexperience.css'
-
+import "../../css/nestedsections.css";
 
 export default function WorkExperience() {
   const { cvData, setCvData } = useContext(CvDataContext);
 
-  
- 
   const removeJob = (index) => {
     const allJobs = cvData.workExperience.slice();
     allJobs.splice(index, 1);
@@ -18,11 +14,10 @@ export default function WorkExperience() {
       workExperience: allJobs,
     }));
   };
-  
 
   const addJob = () => {
     const allJobs = cvData.workExperience.slice();
-    const index = allJobs.length +1
+    const index = allJobs.length + 1;
     allJobs.push({
       key: `job${index}`,
       jobTitle: `job${index}`,
@@ -30,18 +25,20 @@ export default function WorkExperience() {
       period: "20XX - 20XX",
       jobDescription:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
-    })
+    });
     setCvData((prevData) => ({
       ...prevData,
       workExperience: allJobs,
     }));
-  }
+  };
 
   return (
     <div className="work-experience">
       <div className="title-holder">
         <h3>WORK EXPERIENCE</h3>
-        <button className="add-section-button" onClick={() => addJob()}>+</button>
+        <button className="add-section-button" onClick={() => addJob()}>
+          +
+        </button>
       </div>
       {cvData.workExperience.map((job, index) => (
         <div className="work-experience-section" key={job.key}>
@@ -69,7 +66,12 @@ export default function WorkExperience() {
             index={index}
             nestedField="jobDescription"
           />
-          <button className="remove-section-button" onClick={() => removeJob(index)}>X</button>
+          <button
+            className="remove-section-button"
+            onClick={() => removeJob(index)}
+          >
+            X
+          </button>
         </div>
       ))}
     </div>

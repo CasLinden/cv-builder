@@ -6,6 +6,8 @@
   "header header"
   "contact profile"
   "skills work-experience"
+  "languages work-experience"
+  "education work-experience"
   ;
 }
 
@@ -23,5 +25,9 @@
 
 .work-experience{
   grid-area: work-experience;
+}
+
+.education {
+  grid-area: education;
 }
 
