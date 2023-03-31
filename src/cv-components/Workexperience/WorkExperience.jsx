@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
+import { v4 as uuidv4 } from 'uuid';
 import "../../css/nested-sections.css";
 import "../../css/work-experience.css";
 
@@ -8,6 +9,7 @@ export default function WorkExperience() {
   const { cvData, setCvData } = useContext(CvDataContext);
 
   const removeJob = (index) => {
+    console.log(index)
     const allJobs = cvData.workExperience.slice();
     allJobs.splice(index, 1);
     setCvData((prevData) => ({
@@ -20,7 +22,7 @@ export default function WorkExperience() {
     const allJobs = cvData.workExperience.slice();
     const index = allJobs.length + 1;
     allJobs.push({
-      key: `job${index}`,
+      key: uuidv4(),
       jobTitle: `job${index}`,
       companyName: "Some British broadcaster",
       period: "20XX - 20XX",

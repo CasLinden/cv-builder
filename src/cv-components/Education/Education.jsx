@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
+import { v4 as uuidv4 } from 'uuid';
 import "../../css/nested-sections.css"
 
 export default function Education() {
@@ -19,7 +20,7 @@ export default function Education() {
     const allSchools = cvData.education.slice();
     const index = allSchools.length + 1;
     allSchools.push(  {
-      key: "defaultschool1",
+      key: uuidv4(),
       institute: "Univesity of XXXX",
       diploma: "Bsc something",
       period: "20xx -20xx"

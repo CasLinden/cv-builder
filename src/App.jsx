@@ -2,7 +2,7 @@ import Header from "./cv-components/Header/Header";
 import Contact from "./cv-components/Contact/Contact";
 import Profile from "./cv-components/Profile/Profile";
 import Skills from "./cv-components/Skills/Skills";
-import WorkExperience from "./cv-components/Workexperience/WorkExperience";
+import WorkExperience from "/src/cv-components/Workexperience/WorkExperience";
 import Education from "./cv-components/Education/Education";
 import "./css/app.css";
 
