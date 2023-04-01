@@ -6,7 +6,8 @@
 }
 
 body{
-  margin: 20mm
+  margin: 20mm;
+  font-size: 13px;
 }
 
 *,

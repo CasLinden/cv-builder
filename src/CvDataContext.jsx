@@ -11,7 +11,6 @@ function CvDataProvider({ children }) {
       : {
           name: "Global Data Name",
           job: "web developer",
-          age: 30,
           phone: "080-4777-0988",
           email: "carlpilkington@gmail.com",
           website: "anidiotabroad.com",

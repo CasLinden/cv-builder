@@ -1,8 +1,8 @@
 .contact{
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
+  gap: .2rem;
 }
 
 .contact-item{

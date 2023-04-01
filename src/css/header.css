@@ -1,17 +1,18 @@
 .header {
   display: grid;
   grid-template-columns: 1fr auto;
-  margin-bottom: 2rem;
 }
 
-.name-job-age h1 {
-  letter-spacing: .8rem;
-  margin-bottom: .8rem;
+.name-job-age {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .5rem;
 }
 
-.name-job-age h2{
+.name-job-age h1,
+.name-job-age h2 {
   letter-spacing: .8rem;
-  margin-bottom: .8rem;
 }
 
 h3{
