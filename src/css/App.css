@@ -1,6 +1,7 @@
 .app{
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   grid-template-areas: 

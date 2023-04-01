@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
+import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
+import AddSectionButton from "/src/Buttons/AddSectionButton";
 import { v4 as uuidv4 } from 'uuid';
-import "../../css/nested-sections.css"
+import "../../css/nested-sections.scss"
+import "../../css/education.css"
 
 export default function Education() {
   const { cvData, setCvData } = useContext(CvDataContext);
@@ -22,7 +25,7 @@ export default function Education() {
     allSchools.push(  {
       key: uuidv4(),
       institute: "Univesity of XXXX",
-      diploma: "Bsc something",
+      diploma: "Msc something",
       period: "20xx -20xx"
     });
     setCvData((prevData) => ({
@@ -35,9 +38,7 @@ export default function Education() {
     <div className="education">
       <div className="title-holder">
         <h3>EDUCATION</h3>
-        <button className="add-section-button" onClick={() => addSchool()}>
-          +
-        </button>
+        <AddSectionButton onClick={addSchool}></AddSectionButton>
       </div>
       {cvData.education.map((school, index) => (
         <div className="education-section" key={school.key}>
@@ -59,12 +60,7 @@ export default function Education() {
             index={index}
             nestedField="period"
           />
-          <button
-            className="remove-section-button"
-            onClick={() => removeSchool(index)}
-          >
-            X
-          </button>
+          <RemoveSectionButton index={index} onClick={removeSchool}></RemoveSectionButton>
         </div>
       ))}
     </div>

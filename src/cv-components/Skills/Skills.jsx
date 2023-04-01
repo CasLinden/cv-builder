@@ -1,8 +1,10 @@
 import { useContext, useState, useEffect } from "react";
 import { CvDataContext } from "/src/CvDataContext";
 import EditableText from "../EditableText";
+import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
+import AddSectionButton from "/src/Buttons/AddSectionButton";
 import { v4 as uuidv4 } from "uuid";
-import "/src/css/nested-sections.css";
+import "/src/css/nested-sections.scss";
 import "/src/css/skills.css";
 
 import react from "/src/assets/skillicons/react.svg";
@@ -119,9 +121,7 @@ export default function Skills() {
     <div className="skills">
       <div className="title-holder">
         <h3>SKILLS</h3>
-        <button className="add-section-button" onClick={() => addSkill()}>
-          +
-        </button>
+        <AddSectionButton onClick={addSkill} />
       </div>
       {cvData.skills.map((skill, index) => (
         <div className="skill" key={skill.key}>
@@ -138,15 +138,10 @@ export default function Skills() {
             index={index}
             nestedField="description"
           />
-          <button
-            className="remove-section-button"
-            onClick={() => removeSkill(index)}
-          >
-            X
-          </button>
+          <RemoveSectionButton index={index} onClick={removeSkill}/>
           {showIconSelector === true &&
-            selectedSkillIndex === index &&
-            iconSelectionWindow(index)}
+           selectedSkillIndex === index &&
+           iconSelectionWindow(index)}
         </div>
       ))}
     </div>

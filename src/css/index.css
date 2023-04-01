@@ -5,8 +5,10 @@
   }
 }
 
-body{
-  margin: 20mm;
+body {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
   font-size: 13px;
 }
 
@@ -48,3 +50,4 @@ h1, h2, h3, h4, h5, h6{
     background-color: #f9f9f9;
   }
 }
+
