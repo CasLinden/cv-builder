@@ -7,9 +7,9 @@
   
   .remove-section-button{
     top: 5px;
-    right: 0px;
     position: absolute;
   }
+
 
 
   .add-section-button,
@@ -57,4 +57,12 @@ button:active {
 
 .work-experience-section:hover .remove-section-button ~ .work-experience-section {
   border: 5px dotted #f44336;
+}
+
+.button-container{
+  width: 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

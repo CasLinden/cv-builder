@@ -17,7 +17,7 @@ function CvDataProvider({ children }) {
           gitHub: "github.com/CarlPilkington",
           address: "Tokyo Suginami-city",
           profile:
-            "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
+            "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a teDefault Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
           skills: [
             {
               key: "defaultskill1",

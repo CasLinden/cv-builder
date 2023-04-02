@@ -1,0 +1,22 @@
+.icon-container img{
+    height: 1.5rem;
+    padding-right: 1rem;
+}
+.icon-selection-window{
+    color: white;
+    display: grid;
+    left:0px;
+    grid-template-columns: repeat(8, 1.5rem);
+    grid-template-rows: repeat(2, 1.5rem);
+    gap: .2rem;
+    background-color: #213547;
+    padding: .5rem;
+}
+
+/* Icon tile is used in the icon selection window */
+.icon-tile img{
+    display: flex;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}

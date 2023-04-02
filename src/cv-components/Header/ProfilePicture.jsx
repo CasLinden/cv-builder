@@ -49,9 +49,7 @@ export default function ProfilePicture({ me }) {
         onChange={handleFileChange}
         ref={inputRef} // Assign the ref to the input element
       />
-      {isHovering && (
-        <span className="tooltip">Upload file</span>
-      )}
+      {isHovering && <span className="tooltip">Upload file</span>}
     </div>
   );
 }

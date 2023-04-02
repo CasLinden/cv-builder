@@ -5,29 +5,7 @@
 }
 
 .skill{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr 2rem;
 }
 
-.icon-container img{
-    height: 1.5rem;
-}
-
-.icon-tile img{
-    display: flex;
-    height: 1.5rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-selection-window{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5rem;
-    background-color: #213547;
-    padding: .5rem;
-}

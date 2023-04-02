@@ -60,7 +60,9 @@ export default function Education() {
             index={index}
             nestedField="period"
           />
-          <RemoveSectionButton index={index} onClick={removeSchool}></RemoveSectionButton>
+          <div className="button-container">
+            <RemoveSectionButton index={index} onClick={removeSchool}></RemoveSectionButton>
+          </div>
         </div>
       ))}
     </div>

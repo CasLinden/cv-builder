@@ -9,7 +9,6 @@
 .contact-item{
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
 .icon-container{
