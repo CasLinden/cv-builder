@@ -13,7 +13,7 @@
     padding: .5rem;
 }
 
-/* Icon tile is used in the icon selection window */
+/* .icon-tile is only used in the icon selection window */
 .icon-tile img{
     display: flex;
     height: 1.5rem;

@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 
-
 const CvDataContext = createContext();
 
 function CvDataProvider({ children }) {
@@ -11,6 +10,26 @@ function CvDataProvider({ children }) {
       : {
           name: "Global Data Name",
           job: "web developer",
+          contact: [
+            { key: "phone", description: "080-4777-0988", icon: "phone" },
+            {
+              key: "email",
+              description: "carlpilkington@gmail.com",
+              icon: "email",
+            },
+            { key: "website", description: "anidiotabroad.com", icon: "website" },
+            {
+              key: "gitHub",
+              description: "github.com/CarlPilkington",
+              icon: "gitHub",
+            },
+            {
+              key: "address",
+              description: "Tokyo Suginami-city",
+              icon: "address",
+            },
+          ],
+          key: "contact1",
           phone: "080-4777-0988",
           email: "carlpilkington@gmail.com",
           website: "anidiotabroad.com",
@@ -22,28 +41,28 @@ function CvDataProvider({ children }) {
             {
               key: "defaultskill1",
               description: "Solid JavaScript Fundamentals",
-              icon: "js"
+              icon: "js",
             },
             {
               key: "defaultskill2",
               description: "Building web applications with React",
-              icon: "react"
+              icon: "react",
             },
             {
               key: "defaultskill3",
               description: "Using Git from the command line",
-              icon: "git"
+              icon: "git",
             },
             {
               key: "defaultskill4",
               description: "Unit testing with the Jest framework",
-              icon: "jest"
+              icon: "jest",
             },
             {
               key: "defaultskill5",
               description: "Styling pages with Css",
-              icon: "css"
-            }
+              icon: "css",
+            },
           ],
           workExperience: [
             {
@@ -76,17 +95,16 @@ function CvDataProvider({ children }) {
               key: "defaultschool1",
               institute: "Univesity of XXXX",
               diploma: "Bsc something",
-              period: "20xx -20xx"
+              period: "20xx -20xx",
             },
             {
               key: "defaultschool2",
               institute: "Univesity of XXXX",
               diploma: "Bsc something",
-              period: "20xx -20xx"
-            }
-
-          ]
-        }; 
+              period: "20xx -20xx",
+            },
+          ],
+        };
   });
 
   useEffect(() => {

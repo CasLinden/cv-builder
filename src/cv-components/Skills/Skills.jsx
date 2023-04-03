@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import { CvDataContext } from "/src/CvDataContext";
 import EditableText from "../EditableText";
 import Icon from "/src/Icons/Icon";
@@ -38,7 +38,7 @@ export default function Skills() {
       </div>
       {cvData.skills.map((skill, index) => (
         <div className="skill" key={skill.key}>
-          <Icon index={index} skill={skill}></Icon>
+          <Icon index={index} icon={skill.icon} section="skills"></Icon>
           <EditableText
             field="skills"
             component={(props) => <span {...props} />}

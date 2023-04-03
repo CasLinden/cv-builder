@@ -3,7 +3,7 @@ import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
 import AddSectionButton from "/src/Buttons/AddSectionButton";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import "../../css/nested-sections.scss";
 import "../../css/work-experience.css";
 
@@ -11,7 +11,7 @@ export default function WorkExperience() {
   const { cvData, setCvData } = useContext(CvDataContext);
 
   const removeJob = (index) => {
-    console.log(index)
+    console.log(index);
     const allJobs = cvData.workExperience.slice();
     allJobs.splice(index, 1);
     setCvData((prevData) => ({
@@ -40,7 +40,7 @@ export default function WorkExperience() {
   return (
     <div className="work-experience">
       <div className="title-holder">
-        <h3>WORK EXPERIENCE</h3>
+        <h3>EXPERIENCE</h3>
         <AddSectionButton onClick={addJob}></AddSectionButton>
       </div>
       {cvData.workExperience.map((job, index) => (
@@ -69,7 +69,12 @@ export default function WorkExperience() {
             index={index}
             nestedField="jobDescription"
           />
-        <RemoveSectionButton onClick={removeJob} index={index}></RemoveSectionButton>
+          <div className="button-container">
+            <RemoveSectionButton
+              onClick={removeJob}
+              index={index}
+            />
+          </div>
         </div>
       ))}
     </div>

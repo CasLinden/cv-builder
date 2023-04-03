@@ -1,13 +1,14 @@
 .contact{
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-right: 1rem;
   gap: .2rem;
   height: 100%;
 }
 
 .contact-item{
-  display: flex;
+  display: grid;
+  grid-template-columns: 2rem 1fr 1rem;
   align-items: center;
 }
 
@@ -19,4 +20,11 @@
 
 .contact-item img{
   height: 1.5rem;
+}
+
+.contact .add-section-button{
+  position: absolute;
+  top: -1.5rem;
+  
+  
 }

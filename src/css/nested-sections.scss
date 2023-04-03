@@ -1,65 +1,59 @@
 .work-experience-section,
 .education-section,
 .skill,
-.title.title-holder{
-    position: relative; 
-  }
-  
-  .remove-section-button{
-    top: 5px;
-    position: absolute;
-  }
+.title.title-holder {
+  position: relative;
+}
 
+.remove-section-button {
+  position: absolute;
+}
 
+.add-section-button,
+.remove-section-button {
+  visibility: hidden; /* hide buttons by default */
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
-  .add-section-button,
-  .remove-section-button{
-    visibility: hidden; /* hide buttons by default */
-    height: 1rem;
-  }
-  
-  .work-experience-section:hover .remove-section-button,
-  .work-experience:hover .add-section-button,
-  .education-section:hover .remove-section-button,
-  .education:hover .add-section-button,
-  .skills:hover .add-section-button,
-  .skill:hover .remove-section-button
-   {
-    visibility: visible; /* show buttons when the section is hovered */
-  }
+.work-experience-section:hover .remove-section-button,
+.work-experience:hover .add-section-button,
+.education-section:hover .remove-section-button,
+.education:hover .add-section-button,
+.skills:hover .add-section-button,
+.skill:hover .remove-section-button,
+.contact:hover .add-section-button,
+.contact-item:hover .remove-section-button {
+  visibility: visible; /* show buttons when the section is hovered */
+}
 
-  .title-holder{
-    display: flex;
-    justify-content: space-between;
-  }
+.title-holder {
+  display: flex;
+}
 
 button {
   border: none;
 }
-  
-  .add-section-button {
-    background-color: #4CAF50;
-    color: white;
+
+.add-section-button {
+  background-color: #4caf50;
+  color: white;
 }
 
 .remove-section-button {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 
 button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-.work-experience-section:hover .remove-section-button ~ .work-experience-section {
-  border: 5px dotted #f44336;
-}
-
-.button-container{
+.button-container {
   width: 1rem;
   height: 100%;
   display: flex;

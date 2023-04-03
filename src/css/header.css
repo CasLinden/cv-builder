@@ -1,6 +1,8 @@
 .header {
   display: grid;
   grid-template-columns: 1fr auto;
+  background-color: #f2f2f2 ;
+  position: relative;
 }
 
 .name-job-age {
@@ -20,6 +22,8 @@ h3{
 }
 
 .picture-conatiner{
-  grid-column: 2/3;
-  align-self: center;
+  /* grid-column: 2/3; */
+  /* align-self: center; */
+  position: absolute;
+  top: 2rem;
 }

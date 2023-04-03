@@ -1,9 +1,11 @@
 .picture-container {
   position: relative;
   display: inline-block;
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   color: black;
+  transform: translate( -20%, 30%);
+  transform: translate();
 }
 
 .picture-container img {

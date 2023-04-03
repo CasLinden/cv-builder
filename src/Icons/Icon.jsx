@@ -6,13 +6,17 @@ import jest from "/src/assets/skillicons/jest.svg";
 import git from "/src/assets/skillicons/git.svg";
 import css from "/src/assets/skillicons/css.svg";
 import select from "/src/assets/skillicons/select.svg";
+import phone from "/src/assets/contacticons/phone.svg"
+import email from "/src/assets/contacticons/email.svg"
+import website from "/src/assets/contacticons/website.svg";
+import gitHub from "/src/assets/contacticons/github.svg";
+import address from "/src/assets/contacticons/address.svg";
 import "/src/css/icon.css"
 
-
-export default function Icon({skill, index}) {
+export default function Icon({icon, index, section}) {
   const { cvData, setCvData } = useContext(CvDataContext);
   const [showIconSelector, setShowIconSelector] = useState(false);
-  const [selectedSkillIndex, setSelectedSkillIndex] = useState(null);
+  const [SelectedIconIndex, setSelectedIconIndex] = useState(null);
   const [icons, setIcons] = useState(() => {
     // Check if the `icons` prop is available in `cvData`
     if (cvData && cvData.icons) {
@@ -20,6 +24,11 @@ export default function Icon({skill, index}) {
     } else {
       // If `icons` prop is not available, use the default data below
       return {
+        phone: phone,
+        email: email,
+        website: website,
+        gitHub: gitHub,
+        address: address,
         js: js,
         react: react,
         git: git,
@@ -44,17 +53,24 @@ export default function Icon({skill, index}) {
   };
 
   const differentIcon = (index) => {
-    setSelectedSkillIndex(index);
+    setSelectedIconIndex(index);
     setShowIconSelector(true);
   };
 
   const handleIconSelection = (iconName) => {
-    const allSkills = cvData.skills.slice();
-    allSkills[selectedSkillIndex].icon = iconName;
-    setCvData((prevData) => ({
-      ...prevData,
-      skills: allSkills,
-    }));
+    const newCvData = { ...cvData };
+
+    if (section === "skills") {
+      const allSkills = newCvData.skills.slice();
+      allSkills[SelectedIconIndex].icon = iconName;
+      newCvData.skills = allSkills;
+    } else if (section === "contact") {
+      const allContactInfo = newCvData.contact.slice();
+      allContactInfo[SelectedIconIndex].icon = iconName;
+      newCvData.contact = allContactInfo;
+    }
+
+    setCvData(newCvData);
     setShowIconSelector(false);
   };
 
@@ -103,13 +119,12 @@ export default function Icon({skill, index}) {
     <div className="icon-container">
     <img
       onClick={() => differentIcon(index)}
-      src={getIcon(skill.icon)}
+      src={getIcon(icon)}
       alt=""
     />
      {showIconSelector === true &&
-     selectedSkillIndex === index &&
+     SelectedIconIndex === index &&
      iconSelectionWindow(index)} 
   </div>
-   
   )
 }
