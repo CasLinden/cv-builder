@@ -5,6 +5,9 @@ import js from "/src/assets/skillicons/js.svg";
 import jest from "/src/assets/skillicons/jest.svg";
 import git from "/src/assets/skillicons/git.svg";
 import css from "/src/assets/skillicons/css.svg";
+import webpack from "/src/assets/skillicons/webpack.svg";
+import node from "/src/assets/skillicons/node.svg";
+import chatgpt from "/src/assets/skillicons/chatgpt.svg";
 import select from "/src/assets/skillicons/select.svg";
 import phone from "/src/assets/contacticons/phone.svg"
 import email from "/src/assets/contacticons/email.svg"
@@ -34,6 +37,9 @@ export default function Icon({icon, index, section}) {
         git: git,
         jest: jest,
         css: css,
+        webpack: webpack,
+        node: node,
+        chatgpt: chatgpt,
       };
     }
   });
@@ -120,7 +126,7 @@ export default function Icon({icon, index, section}) {
     <img
       onClick={() => differentIcon(index)}
       src={getIcon(icon)}
-      alt=""
+      alt={`${icon} icon`}
     />
      {showIconSelector === true &&
      SelectedIconIndex === index &&

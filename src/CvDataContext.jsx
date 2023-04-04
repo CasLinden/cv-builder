@@ -8,8 +8,8 @@ function CvDataProvider({ children }) {
     return storedData // If there is data in local storage, use it
       ? JSON.parse(storedData) // If there is no data in local storage, use the default data below
       : {
-          name: "Global Data Name",
-          job: "web developer",
+          name: "Carl Pilkington",
+          job: "TV Presenter",
           contact: [
             { key: "phone", description: "080-4777-0988", icon: "phone" },
             {
@@ -29,12 +29,12 @@ function CvDataProvider({ children }) {
               icon: "address",
             },
           ],
-          key: "contact1",
-          phone: "080-4777-0988",
-          email: "carlpilkington@gmail.com",
-          website: "anidiotabroad.com",
-          gitHub: "github.com/CarlPilkington",
-          address: "Tokyo Suginami-city",
+          languages: [
+            { key: "defaultlang1", language: "English",  description: "Native",  },
+            { key: "defaultlang2", language: "Japanese",  description: "Fluent", },
+            { key: "defaultlang3", language: "Dutch",  description: "Native", },
+            { key: "defaultlang4", language: "German",  description: "Basic", },
+          ],
           profile:
             "Default Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a teDefault Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a te",
           skills: [
@@ -93,12 +93,6 @@ function CvDataProvider({ children }) {
           education: [
             {
               key: "defaultschool1",
-              institute: "Univesity of XXXX",
-              diploma: "Bsc something",
-              period: "20xx -20xx",
-            },
-            {
-              key: "defaultschool2",
               institute: "Univesity of XXXX",
               diploma: "Bsc something",
               period: "20xx -20xx",

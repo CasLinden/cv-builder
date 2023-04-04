@@ -45,36 +45,37 @@ export default function WorkExperience() {
       </div>
       {cvData.workExperience.map((job, index) => (
         <div className="work-experience-section" key={job.key}>
+          <div className="section-header">
+            <div className="heading-elements">
+              <EditableText
+                field="workExperience"
+                component={(props) => <h4 {...props} />}
+                index={index}
+                nestedField="jobTitle"
+              />
+              <EditableText
+                field="workExperience"
+                component={(props) => <h5 {...props} />}
+                index={index}
+                nestedField="companyName"
+              />
+              <EditableText
+                field="workExperience"
+                component={(props) => <h6 {...props} />}
+                index={index}
+                nestedField="period"
+              />
+            </div>
+            <div className="button-container">
+              <RemoveSectionButton onClick={removeJob} index={index} />
+            </div>
+          </div>
           <EditableText
             field="workExperience"
-            component={(props) => <h4 {...props} />}
-            index={index}
-            nestedField="jobTitle"
-          />
-          <EditableText
-            field="workExperience"
-            component={(props) => <h5 {...props} />}
-            index={index}
-            nestedField="companyName"
-          />
-          <EditableText
-            field="workExperience"
-            component={(props) => <h6 {...props} />}
-            index={index}
-            nestedField="period"
-          />
-          <EditableText
-            field="workExperience"
-            component={(props) => <span {...props} />}
+            component={(props) => <p {...props} />}
             index={index}
             nestedField="jobDescription"
           />
-          <div className="button-container">
-            <RemoveSectionButton
-              onClick={removeJob}
-              index={index}
-            />
-          </div>
         </div>
       ))}
     </div>

@@ -2,13 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto auto auto 1fr;
-  grid-row-gap: 2rem;
+  column-gap: 3rem;
+  row-gap: 3rem;
   grid-template-areas: 
   "header header"
   "contact profile"
   "skills work-experience"
   "languages work-experience"
-  "education work-experience"
+  "languages education"
   ;
 }
 
@@ -37,4 +38,7 @@
 .education {
   grid-area: education;
 }
-
+ 
+.languages{
+  grid-area: languages;
+}
