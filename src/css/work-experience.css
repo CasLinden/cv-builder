@@ -1,6 +1,9 @@
 .work-experience{
     display: grid;
-    gap: 1rem;
     padding-left: 2.5rem;
+    align-items: start;
 }
 
+.work-experience-section p{
+    margin: 0;
+}

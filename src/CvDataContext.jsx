@@ -60,8 +60,18 @@ function CvDataProvider({ children }) {
             },
             {
               key: "defaultskill5",
-              description: "Styling pages with Css",
+              description: "Styling pages beautifully with Css",
               icon: "css",
+            },
+            {
+              key: "defaultskill6",
+              description: "Bundling apps with Webpack",
+              icon: "webpack",
+            },
+            {
+              key: "defaultskill7",
+              description: "Boosting productivity with ChatGPT",
+              icon: "chatgpt",
             },
           ],
           workExperience: [

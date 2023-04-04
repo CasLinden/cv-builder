@@ -1,5 +1,5 @@
 .education{
     display: grid;
-    gap: 1rem;
     padding-left: 2.5rem;
+    align-items: start;
 }

@@ -10,7 +10,7 @@ import "./css/app.css";
 
 function App() {
   return (
-    <div className="app">
+    <div className="cv">
       <Header></Header>
       <Contact></Contact>
       <Skills></Skills>

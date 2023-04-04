@@ -43,6 +43,11 @@ h3{
   letter-spacing: .4rem;
 }
 
+.title-holder {
+  display: flex;
+  align-items: center;
+}
+
 h4{
   font-size: 1.1rem;
   font-weight: 500;
@@ -61,6 +66,8 @@ h6{
   font-weight: 500;
   margin-bottom: .5rem;
 }
+
+
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

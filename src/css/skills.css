@@ -1,6 +1,7 @@
 .skills{
     display: grid;
     gap: 1rem;
+    align-items: start;
 }
 
 .skill{

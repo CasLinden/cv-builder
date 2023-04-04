@@ -37,7 +37,7 @@ export default function Languages() {
       </div>
       {cvData.languages.map((item, index) => (
         <div className="language-item" key={index}>
-          <div className="section-header">
+          <div className="section-header language-section-header">
               <EditableText
                 field="languages"
                 component={(props) => <h4 {...props} />}

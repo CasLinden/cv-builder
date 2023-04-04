@@ -4,7 +4,9 @@ import "/src/css/profile.css";
 export default function Profile() {
   return (
     <div className="profile">
-      <h3>PROFILE</h3>
+      <div className="title-holder">
+        <h3>PROFILE</h3>
+      </div>
       <EditableText field="profile" component={(props) => <span {...props} />} />
     </div>
   );
