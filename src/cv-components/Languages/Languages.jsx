@@ -22,7 +22,7 @@ export default function Languages() {
   };
 
   const removeLanguagesItem = (index) => {
-    const allItems = cvData.Languages.slice();
+    const allItems = cvData.languages.slice();
     allItems.splice(index, 1);
     setCvData((prevData) => ({
       ...prevData,
