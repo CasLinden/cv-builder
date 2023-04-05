@@ -2,34 +2,24 @@ import { useContext } from "react";
 import { CvDataContext } from "/src/CvDataContext";
 import EditableText from "../EditableText";
 import Icon from "/src/Icons/Icon";
-import AddSectionButton from "../../Buttons/AddSectionButton";
-import RemoveSectionButton from "../../Buttons/RemoveSectionButton";
-import { v4 as uuidv4 } from "uuid";
+import AddSectionButton from "../../buttons/AddSectionButton";
+import RemoveSectionButton from "../../buttons/RemoveSectionButton";
+import { addRemove } from "../../utils/addRemove";
 import "../../css/contact.css";
 import "../../css/nested-sections.scss";
 
 export default function Contact() {
-  const { cvData, setCvData } = useContext(CvDataContext);
+  const { cvData } = useContext(CvDataContext);
   
+  const { add, remove } = addRemove();
+
   const addContactItem = () => {
-    console.log("adding")
-    const allItems = cvData.contact.slice();
-    allItems.push({
-      key: uuidv4(),
-      icon: "phone",
-      description: "contact info",
-    });
-    setCvData((prevData) => ({ ...prevData, contact: allItems }));
-  }
+    add("contact");
+  };
 
   const removeContactItem = (index) => {
-    const allItems = cvData.contact.slice();
-    allItems.splice(index, 1);
-    setCvData((prevData) => ({
-      ...prevData,
-      contact: allItems,
-    }));
-  }
+    remove("contact", index);
+  };
 
   return (
     <div className="contact">

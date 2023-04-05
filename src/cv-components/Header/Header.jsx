@@ -14,10 +14,6 @@ function Header() {
             field="job"
             component={(props) => <h2 {...props} />}
           />
-          {/* <EditableText
-            field="age"
-            component={(props) => <span {...props} />}
-          /> */}
         </div>
           <ProfilePicture></ProfilePicture>
       </div>

@@ -4,30 +4,21 @@ import EditableText from "../EditableText";
 import Icon from "/src/Icons/Icon";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
 import AddSectionButton from "/src/Buttons/AddSectionButton";
-import { v4 as uuidv4 } from "uuid";
+import { addRemove } from "/src/utils/addRemove";
 import "/src/css/nested-sections.scss";
 import "/src/css/skills.css";
 
 export default function Skills() {
-  const { cvData, setCvData } = useContext(CvDataContext);
+  const { cvData } = useContext(CvDataContext);
+
+  const { add, remove } = addRemove();
 
   const addSkill = () => {
-    const allSkills = cvData.skills.slice();
-    allSkills.push({
-      key: uuidv4(),
-      icon: "js",
-      description: "Skill description",
-    });
-    setCvData((prevData) => ({ ...prevData, skills: allSkills }));
+    add("skills");
   };
 
   const removeSkill = (index) => {
-    const allSkills = cvData.skills.slice();
-    allSkills.splice(index, 1);
-    setCvData((prevData) => ({
-      ...prevData,
-      skills: allSkills,
-    }));
+    remove("skills", index);
   };
 
   return (

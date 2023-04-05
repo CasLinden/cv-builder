@@ -3,6 +3,7 @@ import { CvDataContext } from "../../CvDataContext";
 import EditableText from "../EditableText";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
 import AddSectionButton from "/src/Buttons/AddSectionButton";
+import { addRemove } from "../../utils/addRemove";
 import { v4 as uuidv4 } from "uuid";
 import "../../css/nested-sections.scss";
 import "../../css/work-experience.css";
@@ -10,32 +11,15 @@ import "../../css/work-experience.css";
 export default function WorkExperience() {
   const { cvData, setCvData } = useContext(CvDataContext);
 
-  const removeJob = (index) => {
-    console.log(index);
-    const allJobs = cvData.workExperience.slice();
-    allJobs.splice(index, 1);
-    setCvData((prevData) => ({
-      ...prevData,
-      workExperience: allJobs,
-    }));
-  };
+const { add, remove } = addRemove();
 
-  const addJob = () => {
-    const allJobs = cvData.workExperience.slice();
-    const index = allJobs.length + 1;
-    allJobs.push({
-      key: uuidv4(),
-      jobTitle: `job${index}`,
-      companyName: "Some British broadcaster",
-      period: "20XX - 20XX",
-      jobDescription:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
-    });
-    setCvData((prevData) => ({
-      ...prevData,
-      workExperience: allJobs,
-    }));
-  };
+const addJob = () => {
+  add("workExperience");
+};
+
+const removeJob = (index) => {
+  remove("workExperience", index);
+};
 
   return (
     <div className="work-experience">
