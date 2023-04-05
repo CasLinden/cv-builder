@@ -16,6 +16,7 @@ export default function Languages() {
     allItems.push({
       key: uuidv4(),
       description: "language",
+      description: "skill level",
     });
     setCvData((prevData) => ({ ...prevData, languages: allItems }));
   };
