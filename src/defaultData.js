@@ -2,21 +2,21 @@
     name: "Carl Pilkington",
     job: "TV Presenter",
     contact: [
-      { key: "phone", description: "080-4777-0988", icon: "phone" },
+      { key: "phone", description: "XXX-XXXX-XXXX", icon: "phone" },
       {
         key: "email",
-        description: "carlpilkington@gmail.com",
+        description: "applicant@gmail.com",
         icon: "email",
       },
-      { key: "website", description: "anidiotabroad.com", icon: "website" },
+      { key: "website", description: "awesomewebsite.com", icon: "website" },
       {
         key: "gitHub",
-        description: "github.com/CarlPilkington",
+        description: "github.com/myusername",
         icon: "gitHub",
       },
       {
         key: "address",
-        description: "Tokyo Suginami-city",
+        description: "Some place nice",
         icon: "address",
       },
     ],
@@ -68,24 +68,24 @@
     workExperience: [
       {
         key: "defaultjob1",
-        jobTitle: "Job",
-        companyName: "Some British broadcaster",
+        jobTitle: "Awesome Job",
+        companyName: "A respected employer",
         period: "20XX - 20XX",
         jobDescription:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
       },
       {
         key: "defaultjob2",
-        jobTitle: "Job2",
-        companyName: "Some British broadcaster",
+        jobTitle: "Important Position",
+        companyName: "Groundbreaking Startup",
         period: "20XX - 20XX",
         jobDescription:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
       },
       {
         key: "defaultjob3",
-        jobTitle: "Job3",
-        companyName: "Some British broadcaster",
+        jobTitle: "Super Star Job",
+        companyName: "Your Local Supermarket",
         period: "20XX - 20XX",
         jobDescription:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providentrepellendus a tenetur velit nihil est dolore similique deserunt maioresad quam doloremque dolorem voluptate corrupti tempore iure eaque, fugitlaudantium!",
@@ -95,7 +95,7 @@
       {
         key: "defaultschool1",
         institute: "Univesity of XXXX",
-        diploma: "Bsc something",
+        diploma: "BSc of something",
         period: "20xx -20xx",
       },
     ],

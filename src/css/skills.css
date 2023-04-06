@@ -4,9 +4,9 @@
     align-items: start;
 }
 
+
 .skill{
     display: grid;
     grid-template-columns: 2rem 1fr 1rem; 
-    /* for icon, desc, button */
 }
 

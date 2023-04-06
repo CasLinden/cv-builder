@@ -1,25 +1,24 @@
 import { useContext } from "react";
-import { CvDataContext } from "../../CvDataContext";
+import { CvDataContext } from "/src/CvDataContext";
 import EditableText from "../EditableText";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
 import AddSectionButton from "/src/Buttons/AddSectionButton";
-import { addRemove } from "../../utils/addRemove";
-import { v4 as uuidv4 } from "uuid";
-import "../../css/nested-sections.scss";
-import "../../css/work-experience.css";
+import { addRemove } from "/src/utils/addRemove";
+import "/src/css/nested-sections.scss";
+import "/src/css/work-experience.css";
 
 export default function WorkExperience() {
   const { cvData, setCvData } = useContext(CvDataContext);
 
-const { add, remove } = addRemove();
+  const { add, remove } = addRemove();
 
-const addJob = () => {
-  add("workExperience");
-};
+  const addJob = () => {
+    add("workExperience");
+  };
 
-const removeJob = (index) => {
-  remove("workExperience", index);
-};
+  const removeJob = (index) => {
+    remove("workExperience", index);
+  };
 
   return (
     <div className="work-experience">
@@ -27,6 +26,7 @@ const removeJob = (index) => {
         <h3>EXPERIENCE</h3>
         <AddSectionButton onClick={addJob}></AddSectionButton>
       </div>
+      <div className="sections-wrapper">
       {cvData.workExperience.map((job, index) => (
         <div className="work-experience-section" key={job.key}>
           <div className="section-header">
@@ -62,6 +62,7 @@ const removeJob = (index) => {
           />
         </div>
       ))}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,12 @@
 .cv{
   display: grid;
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
+  background-color: white;
   grid-template-columns: 1fr 4fr;
   grid-template-rows:  min-content min-content min-content min-content;
-  column-gap: 2rem;
+  column-gap: 4rem;
   row-gap: 3rem;
   grid-template-areas: 
   "header header"

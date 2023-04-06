@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { CvDataContext } from "../../CvDataContext";
-import EditableText from "../EditableText";
+import { CvDataContext } from "/src/CvDataContext";
+import EditableText from "/src/cv-components/EditableText";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
 import AddSectionButton from "/src/Buttons/AddSectionButton";
-import { addRemove } from "../../utils/addRemove";
-import "../../css/nested-sections.scss";
-import "../../css/education.css";
+import { addRemove } from "/src/utils/addRemove";
+import "/src/css/nested-sections.scss";
+import "/src/css/education.css";
 
 export default function Education() {
   const { cvData, setCvData } = useContext(CvDataContext);
