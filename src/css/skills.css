@@ -7,6 +7,6 @@
 
 .skill{
     display: grid;
-    grid-template-columns: 2rem 1fr 1rem; 
+    grid-template-columns: 2.5rem 1fr 1rem; 
 }
 

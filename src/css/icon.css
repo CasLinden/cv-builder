@@ -1,23 +1,89 @@
-.icon-container img{
-    height: 2rem;
-    padding-right: 1.5rem;
-}
-.icon-selection-window{
-    color: white;
-    display: grid;
-    left:0px;
-    grid-template-columns: repeat(8, 1.5rem);
-    grid-template-rows: repeat(2, 1.5rem);
-    gap: .2rem;
-    background-color: #213547;
-    padding: .5rem;
+.icon-container img {
+  height: 1.8rem;
+  padding-right: 1rem;
+  position: relative;
 }
 
 /* .icon-tile is only used in the icon selection window */
-.icon-tile img{
-    display: flex;
-    height: 1.5rem;
-    justify-content: center;
-    align-items: center;
+.icon-tile img {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
+.icon-selection-window {
+  color: white;
+  display: grid;
+  width: 18rem;
+  height: 6rem;
+  left: -2rem;
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-template-rows: 4rem 2rem;
+  background-color: #42606e;
+  grid-template-areas:
+    "previous icons next"
+    "previous icons next"
+    ". upload .";
+}
+
+.icon-selection-window button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.upload-new-icon {
+  width: 100%;
+  height: 2rem;
+  overflow: hidden;
+  grid-area: upload;
+  padding-bottom: 0.3rem;
+}
+.upload-new-icon img {
+  padding: 0;
+  height: 1.9rem;
+}
+
+.select-previous-icons {
+  grid-area: previous;
+}
+
+.selectable-icons-view {
+  overflow: hidden;
+  position: relative;
+}
+
+.selectable-icons {
+  width: 15rem;
+  display: grid;
+  gap: 0.05rem;
+  grid-template-rows: auto; 
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(2rem, 1fr)
+  ); 
+  grid-area: icons;
+  align-items: start;
+}
+
+.select-next-icons {
+  grid-area: next;
+}
+
+.upload-new-icon-label {
+  position: relative;
+  display: inline-block;
+}
+
+.upload-new-icon-label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

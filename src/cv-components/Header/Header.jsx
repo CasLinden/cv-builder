@@ -1,5 +1,5 @@
 import '/src/css/header.css'
-import EditableText from "../single-html-components/EditableText";
+import EditableText from "/src/ui-components/EditableText";
 import ProfilePicture from "./ProfilePicture";
 
 function Header() {
