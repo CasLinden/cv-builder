@@ -1,4 +1,4 @@
-import EditableText from "../EditableText";
+import EditableText from "./single-html-components/EditableText";
 import "/src/css/profile.css";
 
 export default function Profile() {

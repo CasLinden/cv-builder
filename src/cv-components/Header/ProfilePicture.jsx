@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import carl from "/src/assets/carl.jpeg";
+import avatar from "/src/assets/avatar.svg";
 import "/src/css/picture.css";
 
 export default function ProfilePicture({ me }) {
-  const [image, setImage] = useState(carl);
+  const [image, setImage] = useState(avatar);
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];

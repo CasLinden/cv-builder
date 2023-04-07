@@ -1,11 +1,11 @@
 import ActionBar from "./ui-components/ActionBar";
 import Header from "./cv-components/Header/Header";
-import Contact from "./cv-components/Contact/Contact";
-import Profile from "./cv-components/Profile/Profile";
-import Skills from "./cv-components/Skills/Skills";
-import Languages from "./cv-components/Languages/Languages";
-import WorkExperience from "/src/cv-components/Workexperience/WorkExperience";
-import Education from "./cv-components/Education/Education";
+import Contact from "./cv-components/Contact";
+import Profile from "./cv-components/Profile";
+import Skills from "./cv-components/Skills";
+import Languages from "./cv-components/Languages";
+import WorkExperience from "/src/cv-components/WorkExperience";
+import Education from "./cv-components/Education";
 import "./css/cv.css";
 
 

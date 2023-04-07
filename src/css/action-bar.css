@@ -1,15 +1,10 @@
 .action-bar{
-    display: grid;
+    display: flex;
     height: 10rem;
-    background-color:#DC143C;
-    grid-template-columns: min-content min-content min-content;
+    background-color: white;
 }
 
 .logo{
     width: 10rem;
     height: 10rem;
-}
-
-.print-button{
-    font-size: 2rem;
 }

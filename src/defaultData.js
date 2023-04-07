@@ -99,6 +99,7 @@
         period: "20xx -20xx",
       },
     ],
+    history: []
   };
 
   export {defaultData}

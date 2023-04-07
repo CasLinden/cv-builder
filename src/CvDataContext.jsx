@@ -11,9 +11,10 @@ function CvDataProvider({ children }) {
   });
 
   useEffect(() => {
+    
     localStorage.setItem("cvData", JSON.stringify(cvData));
   }, [cvData]);
-
+  
   return (
     <CvDataContext.Provider value={{ cvData, setCvData }}>
       {children}

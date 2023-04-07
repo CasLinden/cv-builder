@@ -1,10 +1,10 @@
 import { useContext, useRef } from "react";
-import { CvDataContext } from "../CvDataContext";
-import useSubmit from "../hooks/useSubmit";
+import { CvDataContext } from "../../CvDataContext";
+import useSubmit from "../../hooks/useSubmit";
 
 function EditableText({ field, component, index = null, nestedField = null }) {
   const { cvData, setCvData } = useContext(CvDataContext);
-  const contentEditableRef = useRef(null);
+  // const contentEditableRef = useRef(null);
 
   const handleFieldSubmit = (value) => {
     setCvData((prevData) => {

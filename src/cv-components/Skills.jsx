@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CvDataContext } from "/src/CvDataContext";
-import EditableText from "../EditableText";
-import Icon from "/src/Icons/Icon";
+import EditableText from "./single-html-components/EditableText";
+import Icon from "/src/cv-components/single-html-components/Icon";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
 import AddSectionButton from "/src/Buttons/AddSectionButton";
 import { addRemove } from "/src/utils/addRemove";
