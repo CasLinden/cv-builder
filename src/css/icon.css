@@ -1,19 +1,14 @@
+/* ↓↓↓ .icon-container holds icons displayed on the cv ↓↓↓ */
 .icon-container img {
   height: 1.8rem;
   padding-right: 1rem;
   position: relative;
 }
 
-/* .icon-tile is only used in the icon selection window */
+/* ↓↓↓ .icon-tile & all css below is for IconSelectionWindow ↓↓↓ */
 .icon-tile{
   width: 2rem;
   height: 2rem;
-}
-
-.icon-tile img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .icon-selection-window {
@@ -31,28 +26,23 @@
     ". upload .";
 }
 
+.select-next-icons {
+  grid-area: next;
+}
+
+.select-previous-icons {
+  grid-area: previous;
+}
+
 .icon-selection-window button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
   color: white;
   font-size: 1.3rem;
   cursor: pointer;
-}
-
-.upload-new-icon {
-  width: 100%;
-  height: 2rem;
-  overflow: hidden;
-  grid-area: upload;
-  padding-bottom: 0.3rem;
-}
-.upload-new-icon img {
-  padding: 0;
-  height: 1.9rem;
-}
-
-.select-previous-icons {
-  grid-area: previous;
 }
 
 .selectable-icons-view {
@@ -61,20 +51,28 @@
 }
 
 .selectable-icons {
-  width: auto;
   display: grid;
-  gap: .1rem;
-  padding: .1rem;
-  grid-auto-columns: 2rem;
-  grid-template-rows: 2rem 2rem;
-  grid-template-columns: repeat(8, 2rem); 
+  grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(2rem, 1fr));
+  grid-auto-flow: column;
+  gap: 0.1rem;
+  padding: 0.1rem;
   grid-area: icons;
   align-items: start;
   position: absolute;
 }
 
-.select-next-icons {
-  grid-area: next;
+.icon-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-new-icon {
+  width: 100%;
+  height: 2rem;
+  overflow: hidden;
+  grid-area: upload;
+  padding-bottom: 0.3rem;
 }
 
 .upload-new-icon-label {

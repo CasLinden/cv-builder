@@ -9,26 +9,23 @@ import Education from "./cv-components/Education";
 import { IconsProvider } from "/src/contexts/IconsContext";
 import "./css/cv.css";
 
-
 function App() {
   return (
     <div className="site-wrapper">
       <div className="action-bar">
         <ActionBar></ActionBar>
       </div>
-      <div className="cv" id="cv">
-        <Header></Header>
-        <IconsProvider>
+      <IconsProvider>
+        <div className="cv" id="cv">
+          <Header></Header>
           <Contact></Contact>
-        </IconsProvider>
-        <IconsProvider>
           <Skills></Skills>
-        </IconsProvider>
-        <Languages></Languages>
-        <Profile></Profile>
-        <Education></Education>
-        <WorkExperience></WorkExperience>
-      </div>
+          <Languages></Languages>
+          <Profile></Profile>
+          <Education></Education>
+          <WorkExperience></WorkExperience>
+        </div>
+      </IconsProvider>
     </div>
   );
 }

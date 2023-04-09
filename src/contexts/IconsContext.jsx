@@ -43,16 +43,10 @@ export default function IconsProvider({ children }) {
     localStorage.setItem("icons", JSON.stringify(icons));
   }, [icons]);
 
-  const addCustomIcon = (iconData) => {
-    const newIcons = { ...icons };
-    const key = uuidv4();
-    newIcons[`${key}`] = iconData;
-    setIcons(newIcons);
-    return `${key}`;
-  };
+
 
   return (
-    <IconsContext.Provider value={{ icons, setIcons, addCustomIcon }}>
+    <IconsContext.Provider value={{ icons, setIcons }}>
       {children}
     </IconsContext.Provider>
   );
