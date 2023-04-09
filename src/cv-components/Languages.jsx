@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CvDataContext } from "/src/CvDataContext";
+import { CvDataContext } from "/src/contexts/CvDataContext";
 import EditableText from "/src/ui-components/EditableText";
 import AddSectionButton from "/src/buttons/AddSectionButton";
 import RemoveSectionButton from "/src/buttons/RemoveSectionButton";

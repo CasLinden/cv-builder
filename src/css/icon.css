@@ -5,9 +5,13 @@
 }
 
 /* .icon-tile is only used in the icon selection window */
+.icon-tile{
+  width: 2rem;
+  height: 2rem;
+}
+
 .icon-tile img {
   display: flex;
-  height: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -57,16 +61,16 @@
 }
 
 .selectable-icons {
-  width: 15rem;
+  width: auto;
   display: grid;
-  gap: 0.05rem;
-  grid-template-rows: auto; 
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(2rem, 1fr)
-  ); 
+  gap: .1rem;
+  padding: .1rem;
+  grid-auto-columns: 2rem;
+  grid-template-rows: 2rem 2rem;
+  grid-template-columns: repeat(8, 2rem); 
   grid-area: icons;
   align-items: start;
+  position: absolute;
 }
 
 .select-next-icons {

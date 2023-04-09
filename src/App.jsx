@@ -6,6 +6,7 @@ import Skills from "./cv-components/Skills";
 import Languages from "./cv-components/Languages";
 import WorkExperience from "/src/cv-components/WorkExperience";
 import Education from "./cv-components/Education";
+import { IconsProvider } from "/src/contexts/IconsContext";
 import "./css/cv.css";
 
 
@@ -17,8 +18,12 @@ function App() {
       </div>
       <div className="cv" id="cv">
         <Header></Header>
-        <Contact></Contact>
-        <Skills></Skills>
+        <IconsProvider>
+          <Contact></Contact>
+        </IconsProvider>
+        <IconsProvider>
+          <Skills></Skills>
+        </IconsProvider>
         <Languages></Languages>
         <Profile></Profile>
         <Education></Education>

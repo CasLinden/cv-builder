@@ -1,17 +1,36 @@
 import select from "/src/assets/skillicons/select.svg";
-
+import { useState } from "react";
 export default function IconSelectionWindow({
   index,
   icons,
   handleIconSelection,
   handleSvgUpload,
 }) {
+
+  const [iconView, setIconView] = useState(0)
+
+  const viewWidth = () => {
+    return document.querySelector('.selectable-icons-view').offsetWidth
+  }
+  
+  const scrollLeft = () => {
+
+    if (iconView < 0){
+    setIconView((prevScrollPosition) => prevScrollPosition + viewWidth()); 
+    }
+  };
+
+  const scrollRight = () => {
+    setIconView((prevScrollPosition) => prevScrollPosition - viewWidth());
+  };
+
+  
   return (
     <div className="icon-selection-window" style={{ position: "absolute" }}>
-      <button className="select-previous-icons">{`<`}</button>
+      <button onClick={scrollLeft} className="select-previous-icons">{`<`}</button>
       {/* show available icons */}
       <div className="selectable-icons-view">
-        <div className="selectable-icons">
+        <div className="selectable-icons" style={{ transform: `translateX(${iconView}px)` }}>
           {Object.keys(icons).map((iconName) => (
             <div
               key={iconName}
@@ -40,7 +59,7 @@ export default function IconSelectionWindow({
           }}
         />
       </label>
-      <button className="select-next-icons">{`>`}</button>
+      <button onClick={scrollRight} className="select-next-icons">{`>`}</button>
     </div>
   );
 }

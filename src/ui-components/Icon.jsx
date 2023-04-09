@@ -1,45 +1,16 @@
 import { useContext, useState, useEffect } from "react";
-import { CvDataContext } from "/src/CvDataContext";
+import { CvDataContext } from "/src/contexts/CvDataContext";
+import { IconsContext } from "/src/contexts/IconsContext";
+import { v4 as uuidv4 } from "uuid";
 import IconSelectionWindow from "/src/ui-components/IconSelectionWindow";
-import react from "/src/assets/skillicons/react.svg";
-import js from "/src/assets/skillicons/js.svg";
-import jest from "/src/assets/skillicons/jest.svg";
-import git from "/src/assets/skillicons/git.svg";
-import css from "/src/assets/skillicons/css.svg";
-import webpack from "/src/assets/skillicons/webpack.svg";
-import node from "/src/assets/skillicons/node.svg";
-import chatgpt from "/src/assets/skillicons/chatgpt.svg";
-import phone from "/src/assets/contacticons/phone.svg"
-import email from "/src/assets/contacticons/email.svg"
-import website from "/src/assets/contacticons/website.svg";
-import gitHub from "/src/assets/contacticons/github.svg";
-import address from "/src/assets/contacticons/address.svg";
 import "/src/css/icon.css"
 
 export default function Icon({icon, index, section}) {
   const { cvData, setCvData } = useContext(CvDataContext);
+  const { icons, setIcons } = useContext(IconsContext)
   const [showIconSelector, setShowIconSelector] = useState(false);
   const [SelectedIconIndex, setSelectedIconIndex] = useState(null);
-  const [icons, setIcons] = useState(() => {
-    const storedIcons = localStorage.getItem("icons");
-    return storedIcons // If there are Icons in local storage, use it
-      ? JSON.parse(storedIcons) // If there are no icons in local storage, use the default icons below
-      :  {
-        phone: phone,
-        email: email,
-        website: website,
-        gitHub: gitHub,
-        address: address,
-        js: js,
-        react: react,
-        git: git,
-        jest: jest,
-        css: css,
-        webpack: webpack,
-        node: node,
-        chatgpt: chatgpt,
-      };
-    });
+
 
   useEffect(() => {
     localStorage.setItem("icons", JSON.stringify(icons));
@@ -78,20 +49,25 @@ export default function Icon({icon, index, section}) {
   };
 
   const handleSvgUpload = (event, index) => {
+    console.log(`handleUpload running with index: ${index}`)
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
         const newIcons = { ...icons };
         const base64Icon = e.target.result;
-        newIcons[`custom-${index}`] = base64Icon;
+        const key = uuidv4()
+        newIcons[`${key}`] = base64Icon;
         setIcons(newIcons);
-        handleIconSelection(`custom-${index}`);
+        handleIconSelection(`${key}`);
+        console.log(icons)
       };
       reader.readAsDataURL(file);
     }
     document.removeEventListener('click', handleClickOutside);
   };
+
+
 
   const handleClickOutside = (event) => {
     const iconWindow = document.querySelector('.icon-selection-window');

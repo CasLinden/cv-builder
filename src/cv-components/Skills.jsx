@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CvDataContext } from "/src/CvDataContext";
+import { CvDataContext } from "/src/contexts/CvDataContext";
 import EditableText from "/src/ui-components/EditableText";
 import Icon from "/src/ui-components/Icon";
 import RemoveSectionButton from "/src/Buttons/RemoveSectionButton";
@@ -22,25 +22,26 @@ export default function Skills() {
   };
 
   return (
-    <div className="skills">
-      <div className="title-holder">
-        <h3>SKILLS</h3>
-        <AddSectionButton onClick={addSkill} />
-      </div>
-      {cvData.skills.map((skill, index) => (
-        <div className="skill" key={skill.key}>
-          <Icon index={index} icon={skill.icon} section="skills"></Icon>
-          <EditableText
-            field="skills"
-            component={(props) => <span {...props} />}
-            index={index}
-            nestedField="description"
-          />
-          <div className="button-container">
-            <RemoveSectionButton index={index} onClick={removeSkill} />
-          </div>
+   
+      <div className="skills">
+        <div className="title-holder">
+          <h3>SKILLS</h3>
+          <AddSectionButton onClick={addSkill} />
         </div>
-      ))}
-    </div>
+        {cvData.skills.map((skill, index) => (
+          <div className="skill" key={skill.key}>
+              <Icon index={index} icon={skill.icon} section="skills"></Icon>
+            <EditableText
+              field="skills"
+              component={(props) => <span {...props} />}
+              index={index}
+              nestedField="description"
+            />
+            <div className="button-container">
+              <RemoveSectionButton index={index} onClick={removeSkill} />
+            </div>
+          </div>
+        ))}
+      </div>
   );
 }

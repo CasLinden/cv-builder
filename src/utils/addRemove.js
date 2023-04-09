@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CvDataContext } from "/src/CvDataContext";
+import { CvDataContext } from "/src/contexts/CvDataContext";
 import { defaultData } from "../defaultData";
 import { v4 as uuidv4 } from "uuid";
 
