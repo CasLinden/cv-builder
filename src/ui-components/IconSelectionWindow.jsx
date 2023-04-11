@@ -19,14 +19,13 @@ export default function IconSelectionWindow({
 
   const scrollLeft = () => {
     if (iconView < 0) {
-      setIconView((prevScrollPosition) => prevScrollPosition + viewWidth());
+      setIconView((prev) => prev + viewWidth());
     }
   };
 
   const scrollRight = () => {
     if (iconView - 180 > maxWidth() * -1 ){
-      
-    setIconView((prevScrollPosition) => prevScrollPosition - viewWidth());
+    setIconView((prev) => prev - viewWidth());
     }
   };
 
@@ -65,20 +64,21 @@ export default function IconSelectionWindow({
         </div>
       </div>
       {/* ↓↓↓ show UPLOAD NEW  SVG Button ↓↓↓ */}
-      <label htmlFor={`select-icon-${index}`} className="upload-new-icon-label">
-        <button className="upload-new-icon">
-          <img src={select} alt="add icon" />
-          UPLOAD SVG
-        </button>
-        <input
-          id={`select-icon-${index}`}
-          type="file"
-          accept=".svg"
-          onChange={(event) => {
-            handleSvgUpload(event, index);
-          }}
-        />
-      </label>
+      <div className="upload-button-container">
+        <label htmlFor={`select-icon-${index}`} className="upload-new-icon-label">
+          <button className="upload-new-icon">
+            ADD .SVG FILE
+          </button>
+          <input
+            id={`select-icon-${index}`}
+            type="file"
+            accept=".svg"
+            onChange={(event) => {
+              handleSvgUpload(event, index);
+            }}
+          />
+        </label>
+      </div>
       <button onClick={scrollRight} className="select-next-icons">{`>`}</button>
     </div>
   );

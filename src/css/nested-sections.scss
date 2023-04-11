@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.add-section-button,
+.remove-section-button:hover{
+  cursor: pointer;
+}
 
 .add-section-button,
 .remove-section-button {

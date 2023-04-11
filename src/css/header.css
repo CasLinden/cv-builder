@@ -20,8 +20,6 @@ h3{
 }
 
 .picture-conatiner{
-  /* grid-column: 2/3; */
-  /* align-self: center; */
   position: absolute;
   top: 2rem;
 }

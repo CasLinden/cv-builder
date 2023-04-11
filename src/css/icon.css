@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.icon-container:hover{
+  cursor: pointer;
+}
+
 /* ↓↓↓ .icon-tile & all css below is for IconSelectionWindow ↓↓↓ */
 .icon-tile{
   width: 2rem;
@@ -24,6 +28,7 @@
     "previous icons next"
     "previous icons next"
     ". upload .";
+    z-index: 2;
 }
 
 .select-next-icons {
@@ -34,7 +39,8 @@
   grid-area: previous;
 }
 
-.icon-selection-window button {
+.select-next-icons,
+.select-previous-icons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,13 +73,35 @@
   flex-direction: column;
 }
 
-.upload-new-icon {
-  width: 100%;
-  height: 2rem;
-  overflow: hidden;
-  grid-area: upload;
-  padding-bottom: 0.3rem;
+.upload-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.upload-button-container:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.upload-button-container:active {
+  transform: scale(0.95);
+}
+
+
+.upload-new-icon {
+  color: #42606e;
+  font-size: .9rem;
+  font-weight: 700;
+  background-color: white;
+  margin: .2rem;
+  padding: .2rem;
+  grid-area: upload;
+  align-self: center;
+  justify-self: center;
+}
+
+
 
 .upload-new-icon-label {
   position: relative;
