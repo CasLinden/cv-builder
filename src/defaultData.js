@@ -13,7 +13,7 @@
         key: "gitHub",
         description: "github.com/myusername",
         icon: "gitHub",
-      },``
+      },
       {
         key: "address",
         description: "Some place nice",
