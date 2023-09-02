@@ -1,6 +1,6 @@
  const defaultData = {
-    name: "Carl Pilkington",
-    job: "TV Presenter",
+    name: "John Doe",
+    job: "WEB DEVELOPER",
     contact: [
       { key: "phone", description: "XXX-XXXX-XXXX", icon: "phone" },
       {
